@@ -13,15 +13,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       home: Scaffold(
         body: Center(
-          child: Text(
-            'Hello, world!!!!!!'
-          )
-        )
-      )
+          child: Text('Hello, world!!!!!!'),
+        ),
+      ),
     );
-    // return const Text(
-    //   'Hello, world!!!!!!',
-    //   textDirection: TextDirection.ltr,
-    // );
   }
 }
