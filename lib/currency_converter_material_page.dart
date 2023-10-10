@@ -5,7 +5,17 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    const myBorder = OutlineInputBorder(
+      borderSide: BorderSide(
+        color: Colors.brown,
+        width: 3.3,
+        style: BorderStyle.solid,
+        strokeAlign: BorderSide.strokeAlignOutside,
+      ),
+      borderRadius: BorderRadius.all(Radius.circular(30)),
+    );
+
+    return Scaffold(
       backgroundColor: Colors.blueGrey,
       body: Center(
         child: ColoredBox(
@@ -13,7 +23,7 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 'Hello Mini!',
                 style: TextStyle(
                   color: Color.fromARGB(255, 255, 255, 255),
@@ -21,37 +31,26 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              TextField(
-                style: TextStyle(
-                  color: Color.fromARGB(255, 0, 0, 0),
-                ),
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Color.fromARGB(255, 255, 255, 255),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Colors.brown,
-                      width: 3.3,
-                      style: BorderStyle.solid,
-                      strokeAlign: BorderSide.strokeAlignOutside,
+              Container(
+                margin: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(6),
+                child: const TextField(
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 0, 0, 0),
+                  ),
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Color.fromARGB(255, 255, 255, 255),
+                    focusedBorder: myBorder,
+                    enabledBorder: myBorder,
+                    prefixIcon: Icon(Icons.monetization_on_sharp),
+                    prefixIconColor: Colors.black,
+                    hintText: 'Enter Currency in USD',
+                    hintStyle: TextStyle(
+                      color: Colors.black,
                     ),
-                    borderRadius: BorderRadius.all(Radius.circular(180)),
                   ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Colors.brown,
-                      width: 3.3,
-                      style: BorderStyle.solid,
-                      strokeAlign: BorderSide.strokeAlignOutside,
-                    ),
-                    borderRadius: BorderRadius.all(Radius.circular(180)),
-                  ),
-                  prefixIcon: Icon(Icons.monetization_on_sharp),
-                  prefixIconColor: Colors.black,
-                  hintText: 'Enter Currency in USD',
-                  hintStyle: TextStyle(
-                    color: Colors.black,
-                  ),
+                  keyboardType: TextInputType.numberWithOptions(decimal: true),
                 ),
               ),
             ],
