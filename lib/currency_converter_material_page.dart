@@ -23,13 +23,29 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
               ),
               TextField(
                 style: TextStyle(
-                  color: Color.fromARGB(255, 255, 255, 255),
+                  color: Color.fromARGB(255, 0, 0, 0),
                 ),
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Color.fromARGB(255, 255, 255, 255),
-                  focusedBorder: InputBorder.none,
-                  border: InputBorder.none,
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.brown,
+                      width: 3.3,
+                      style: BorderStyle.solid,
+                      strokeAlign: BorderSide.strokeAlignOutside,
+                    ),
+                    borderRadius: BorderRadius.all(Radius.circular(180)),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.brown,
+                      width: 3.3,
+                      style: BorderStyle.solid,
+                      strokeAlign: BorderSide.strokeAlignOutside,
+                    ),
+                    borderRadius: BorderRadius.all(Radius.circular(180)),
+                  ),
                   prefixIcon: Icon(Icons.monetization_on_sharp),
                   prefixIconColor: Colors.black,
                   hintText: 'Enter Currency in USD',
