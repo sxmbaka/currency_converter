@@ -23,17 +23,23 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
-                'Hello Mini!',
-                style: TextStyle(
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
+              Container(
+                color: Colors.yellowAccent,
+                height: 200,
+                width: 300,
+                child: const Text(
+                  'Hello Mini!',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               Container(
                 margin: const EdgeInsets.all(10),
                 padding: const EdgeInsets.all(6),
+                color: Colors.yellowAccent,
                 child: const TextField(
                   style: TextStyle(
                     color: Color.fromARGB(255, 0, 0, 0),
