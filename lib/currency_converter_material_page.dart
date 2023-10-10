@@ -22,12 +22,16 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
                 ),
               ),
               TextField(
-                decoration: InputDecoration(
-                  label: Text(
-                    'Enter Currency',
-                    style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
-                  ),
+                style: TextStyle(
+                  color: Color.fromARGB(255, 255, 255, 255),
                 ),
+                decoration: InputDecoration(
+                    suffixIcon: Icon(Icons.monetization_on_sharp),
+                    suffixIconColor: Colors.white70,
+                    hintText: 'Enter Currency in USD',
+                    hintStyle: TextStyle(
+                      color: Colors.white60,
+                    )),
               ),
             ],
           ),
