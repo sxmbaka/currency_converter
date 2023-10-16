@@ -7,7 +7,7 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
   Widget build(BuildContext context) {
     const myBorder = OutlineInputBorder(
       borderSide: BorderSide(
-        color: Colors.brown,
+        color: Color.fromARGB(255, 0, 0, 0),
         width: 3.3,
         style: BorderStyle.solid,
         strokeAlign: BorderSide.strokeAlignOutside,
@@ -19,16 +19,16 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
       backgroundColor: Colors.blueGrey,
       body: Center(
         child: ColoredBox(
-          color: Color.fromRGBO(48, 48, 44, 0),
+          color: const Color.fromRGBO(48, 48, 44, 0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                color: Colors.yellowAccent,
-                height: 200,
-                width: 300,
+                // color: Colors.yellowAccent,
+                // height: 200,
+                // width: 300,
                 child: const Text(
-                  'Hello Mini!',
+                  'Convert Currency!',
                   style: TextStyle(
                     color: Color.fromARGB(255, 255, 255, 255),
                     fontSize: 25,
@@ -39,7 +39,7 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.all(10),
                 padding: const EdgeInsets.all(6),
-                color: Colors.yellowAccent,
+                // color: Colors.yellowAccent,
                 child: const TextField(
                   style: TextStyle(
                     color: Color.fromARGB(255, 0, 0, 0),
