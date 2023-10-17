@@ -56,7 +56,7 @@ class _CurrencyConverterMaterialApp
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'INR $resultValue',
+                resultValue != 0 ? 'INR ${resultValue.toStringAsFixed(2)}' : '',
                 style: const TextStyle(
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontSize: 50,
@@ -89,7 +89,8 @@ class _CurrencyConverterMaterialApp
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                 child: TextButton(
                   onPressed: () {
                     setState(() {
@@ -116,6 +117,44 @@ class _CurrencyConverterMaterialApp
                       SizedBox(width: 10),
                       Text(
                         'Convert',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                child: TextButton(
+                  onPressed: () {
+                    setState(() {
+                      resultValue = 0;
+                    });
+                  },
+                  style: TextButton.styleFrom(
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(30),
+                      ),
+                    ),
+                    elevation: 15,
+                    shadowColor: Colors.black,
+                    backgroundColor: Colors.black,
+                    foregroundColor: Colors.white,
+                    minimumSize: const Size(double.infinity, 50),
+                  ),
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.restart_alt),
+                      SizedBox(width: 10),
+                      Text(
+                        'Reset',
                         style: TextStyle(
                           color: Color.fromARGB(255, 255, 255, 255),
                           fontSize: 18,
