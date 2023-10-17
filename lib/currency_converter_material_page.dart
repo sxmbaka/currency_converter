@@ -55,7 +55,7 @@ class _CurrencyConverterMaterialApp
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                resultValue.toString(),
+                'INR $resultValue',
                 style: const TextStyle(
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontSize: 50,
