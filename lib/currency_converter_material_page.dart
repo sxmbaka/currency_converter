@@ -24,17 +24,15 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                // color: Colors.yellowAccent,
-                // height: 200,
-                // width: 300,
-                child: const Text(
-                  'Convert Currency!',
-                  style: TextStyle(
-                    color: Color.fromARGB(255, 255, 255, 255),
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                  ),
+              // color: Colors.yellowAccent,
+              // height: 200,
+              // width: 300,
+              const Text(
+                'Convert Currency!',
+                style: TextStyle(
+                  color: Color.fromARGB(255, 255, 255, 255),
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               Container(
@@ -60,18 +58,22 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
                   keyboardType: TextInputType.numberWithOptions(decimal: true),
                 ),
               ),
-              TextButton(
-                onPressed: () {
-                  if (kDebugMode) {
-                    debugPrint('Convert button pressed!');
-                  }
-                },
-                style: const ButtonStyle(
-                  backgroundColor: MaterialStatePropertyAll(Colors.black),
-                  foregroundColor: MaterialStatePropertyAll(Colors.white),
-                ),
-                child: const Text(
-                  'Convert',
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: TextButton(
+                  onPressed: () {
+                    if (kDebugMode) {
+                      debugPrint('Convert button pressed!');
+                    }
+                  },
+                  style: const ButtonStyle(
+                      backgroundColor: MaterialStatePropertyAll(Colors.black),
+                      foregroundColor: MaterialStatePropertyAll(Colors.white),
+                      minimumSize:
+                          MaterialStatePropertyAll(Size(double.infinity, 50))),
+                  child: const Text(
+                    'Convert',
+                  ),
                 ),
               ),
             ],
