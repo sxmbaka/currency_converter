@@ -13,6 +13,7 @@ class _CurrencyConverterMaterialApp
     extends State<CurrencyConverterMaterialPage> {
   final TextEditingController textEditingController = TextEditingController();
   double resultValue = 0, inputValue = 0;
+
   final double dollarToRupee = 81;
 
   @override
