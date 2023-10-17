@@ -18,7 +18,6 @@ class _CurrencyConverterMaterialApp
 
   @override
   Widget build(BuildContext context) {
-    debugPrint('rebuilt');
     const myBorder = OutlineInputBorder(
       borderSide: BorderSide(
         color: Color.fromARGB(255, 0, 0, 0),
@@ -28,6 +27,13 @@ class _CurrencyConverterMaterialApp
       ),
       borderRadius: BorderRadius.all(Radius.circular(30)),
     );
+
+    void convert() {
+      setState(() {
+        inputValue = double.parse(textEditingController.text);
+        resultValue = dollarToRupee * inputValue;
+      });
+    }
 
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 66, 67, 64),
@@ -68,6 +74,7 @@ class _CurrencyConverterMaterialApp
                 padding: const EdgeInsets.all(6),
                 // color: Colors.yellowAccent,
                 child: TextField(
+                  onSubmitted: (value) => convert(),
                   controller: textEditingController,
                   style: const TextStyle(
                     color: Color.fromARGB(255, 0, 0, 0),
@@ -92,12 +99,7 @@ class _CurrencyConverterMaterialApp
                 padding:
                     const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                 child: TextButton(
-                  onPressed: () {
-                    setState(() {
-                      inputValue = double.parse(textEditingController.text);
-                      resultValue = dollarToRupee * inputValue;
-                    });
-                  },
+                  onPressed: convert,
                   style: TextButton.styleFrom(
                     shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(
