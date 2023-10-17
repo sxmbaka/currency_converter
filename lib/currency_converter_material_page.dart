@@ -24,9 +24,6 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // color: Colors.yellowAccent,
-              // height: 200,
-              // width: 300,
               const Text(
                 'Convert Currency!',
                 style: TextStyle(
@@ -66,13 +63,32 @@ class CurrencyConverterMaterialPage extends StatelessWidget {
                       debugPrint('Convert button pressed!');
                     }
                   },
-                  style: const ButtonStyle(
-                      backgroundColor: MaterialStatePropertyAll(Colors.black),
-                      foregroundColor: MaterialStatePropertyAll(Colors.white),
-                      minimumSize:
-                          MaterialStatePropertyAll(Size(double.infinity, 50))),
-                  child: const Text(
-                    'Convert',
+                  style: TextButton.styleFrom(
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(30),
+                      ),
+                    ),
+                    elevation: 15,
+                    shadowColor: Colors.black,
+                    backgroundColor: Colors.black,
+                    foregroundColor: Colors.white,
+                    minimumSize: const Size(double.infinity, 50),
+                  ),
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.money_sharp),
+                      SizedBox(width: 10),
+                      Text(
+                        'Convert',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
